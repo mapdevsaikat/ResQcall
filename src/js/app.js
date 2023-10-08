@@ -38,13 +38,13 @@ import { getDatabase, ref, set, push } from "https://www.gstatic.com/firebasejs/
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCMIb4vvq6pO79g_v4qRCeyGADDLlqNgbg",
-  authDomain: "sahay-f4937.firebaseapp.com",
-  databaseURL: "https://sahay-f4937-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "sahay-f4937",
-  storageBucket: "sahay-f4937.appspot.com",
-  messagingSenderId: "780480878569",
-  appId: "1:780480878569:web:9a959d8b28818493addd78",
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
   measurementId: "G-RFNW3VNTEP"
 };
 
