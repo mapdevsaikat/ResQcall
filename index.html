@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Discover ResQcall: Your Trusted Companion for Real-time Weather Updates and Disaster Reporting. Get Accurate Weather Information Tailored to Your Location Instantly. Stay Informed and Stay Safe. Report Disasters and Seek Help Quickly and Efficiently. Join the ResQcall Community Today. Keywords: real-time weather updates, disaster reporting, flood, flash flood, urban flood, waterlogging, fire, forest fire, landslide, earthquake, wildfire, accurate weather information, location-based app, seek help, stay safe, ResQcall community">
+    <link rel="stylesheet" href="./src/css/app.css">
+    <link rel="icon" type="image/x-icon" href="src/img/favicon.ico">
+    <title>ResQcall</title>
+    <!-- Include Leaflet library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Place for Leaflet dependecies -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.79.0/dist/L.Control.Locate.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.79.0/dist/L.Control.Locate.min.css" rel="stylesheet">
+<!--End Leaflet -->
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script type="module" src="/src/js/app.min.js"></script>
+    <title>ResQCall</title>
+</head>
+<body class="dark-theme">
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Discover ResQcall</h2>
+            <p>Your Trusted Companion for Real-time Weather Updates and Disaster Reporting. Get Accurate Weather Information Tailored to Your Location Instantly. Stay Informed and Stay Safe. Report Disasters and Seek Help Quickly and Efficiently. Join the ResQcall Community Today.</p>
+            <h4>Terms and Conditions:</h4>
+            <p>This app collects location information and mobile numbers for reporting purposes only. We do not use this data for business purposes.</p>
+            <a>This is location based app, enable GPS to spot your location</a>
+            <br>
+            <label>
+                <input type="checkbox" id="acceptTerms"> Accept the Terms and Conditions
+            </label>
+            <button id="acceptButton">Accept</button>
+        </div>
+    </div>    
+<div class="container">
+    <div id="header">
+        <img src="/src/img/logo.png"/><h1>ResQCall</h1>    
+    </div>
+    <!--Weather Div-->
+    <div id="weather-container">
+        <div id="weather-info">
+            <div id="location"></div>
+            <div id="weather-description">
+                <img id="weather-icon" src="" alt="Loading...">
+                <div id="weather-details"></div>
+            </div>
+        </div>
+        <div id="other-weather">
+            <div id="temperature"></div>
+            <div id="humidity"></div>
+            <div id="wind-speed"></div>
+            <div id="pressure"></div>
+        </div>
+    </div>
+    <div id="map"></div>
+    <form id="reportForm">
+        <div id="alert" class="alert">Your report has been submitted!</div>
+
+        <div class="form-group">
+            <label for="disasterType">Type of Disaster *:</label>
+            <select id="disasterType" required>
+                <option value="" disabled selected>Select type of Disaster</option>
+                <option value="Flash Flood">Flash Flood</option>
+                <option value="Flood">Flood</option>
+                <option value="Urban Flood">Urban Flood</option>
+                <option value="Earthquake">Earthquake</option>
+                <option value="Landslide">Landslide</option>
+                <option value="Fire">Fire</option>
+                <option value="Wildfire">Wildfire</option>
+            </select>
+        </div>
+        <div class="form-group">
+        <a><b>Touch the Map</b></a>
+            <label for="loc_latitude">Latitude *:</label>
+            <input type="text" id="loc_latitude" placeholder="Latitude" required>
+            <label for="loc_longitude">Longitude *:</label>
+            <input type="text" id="loc_longitude" placeholder="Longitude" required>
+        </div>
+        <div class="form-group">
+            <label for="mobileNumber">Mobile Number *:</label>
+            <input type="tel" id="mobileNumber" placeholder="10 digit mobile number" required pattern="[0-9]{10}">
+            <!--<small class="error-text">Please enter a 10-digit valid mobile number.</small>-->
+        </div>         
+
+        <div class="form-group">
+            <label for="urgentNeeds">Urgent Needs:</label>
+            <select name="urgentNeeds" id="urgentNeeds" multiple>
+                <option value="" disabled>Select urgent needs</option>
+                <option value="rescue">Rescue</option>
+                <option value="food">Food</option>
+                <option value="water">Water</option>
+                <option value="babyFood">Baby Food</option>
+                <option value="sanitaryKit">Sanitary Kit</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="mediaUpload">Upload Photos/Videos (Max 5MB each) *:</label>
+            <input type="file" id="mediaUpload" accept="image/*, video/*" multiple required>
+            <div id="mediaUploadAlert" style="display: none; color: green;">Uploaded successful!</div>
+        </div>
+
+        <button id="submit" type="submit">Submit</button>
+    </form>
+</div>
+<script type="text/javascript" src="/src/js/weather.min.js"></script>
+<script type="text/javascript" src="/src/js/map.js"></script>
+</body>
+</html>

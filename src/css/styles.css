@@ -1,0 +1,251 @@
+/* Updated styles for dark theme */
+body.dark-theme {
+    background-color: #f9fcff;
+    background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+    color: white;
+}
+
+/* Add your custom styles here */
+body {
+    font-family: 'Clash Grotesk', sans-serif;
+}
+
+/* End of Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #2f2f2fbc;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    font-size: 14px;
+    text-align: justified;
+    border-radius: 10px;
+    position: relative;
+}
+.modal-content h2 {
+    text-align: center;
+}
+.modal-content a {
+    color: #00b303;
+}
+.modal-content h4 {
+    color: #00a6ff;
+}
+.close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+#acceptButton {
+    background-color: #247ba0;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#acceptButton:hover {
+    background-color: #00b303;
+}
+/* End of Modal */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #0d0a0b;
+    background-image: linear-gradient(315deg, #0d0a0b 0%, #009fc2 74%);
+    border-radius: 10px;
+}
+#header{
+    width:100%;
+    text-align:center;
+}
+img{
+    display:inline-block;
+    height:50px;
+    margin: 0 auto;
+}
+
+/* CSS for weather card */
+#weather-container {
+    background-color: #5b646728;
+    background-image: linear-gradient(315deg, #5b646715 0%, #8b939a0a 90%);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    max-width: 400px;
+}
+
+#weather-info {
+    display: flex;
+    justify-content: space-between;
+    border-right: 2px dotted #fff;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#location {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#weather-description {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+}
+
+#weather-icon {
+    width: 60;
+    height: 60;
+}
+
+#weather-details {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#other-weather {
+    text-align: left;
+    margin-left: 12px;
+}
+
+#other-weather h2 {
+    font-size: 12px;
+}
+
+#other-weather div {
+    font-size: 12px;
+    margin: 8px auto;
+}
+/* End CSS for weather card */
+
+/* Style the map to fit within the container */
+#map {
+    width: 100%; /* Set the map width to 100% of the container */
+    height: 300px; /* Set the map height as desired */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+form {
+    overflow: hidden;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:normal;
+}
+/* CSS for error-text */
+.error-text {
+  color: rgb(255, 167, 151);
+  font-size: 12px;
+  margin-top: 5px;
+}
+/* CSS for form-group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.form-group a {
+    color: #00db04;
+}
+
+.form-group select,
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="file"],
+form-group select[multiple], 
+.form-group textarea {
+  max-width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 12px;
+  align-items: center;
+}
+
+.form-group select:focus,
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Additional styling for the media upload alert */
+#mediaUploadAlert {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.alert{
+    width: 80%;
+    background: rgba(20, 255, 20, 0.501);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 18px;
+    display: none;
+}
+
+label, select [type="text"], input[type="tel"], input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+}
+
+input[type="text"], input[type="tel"], input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+    color: #0096BF;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 80px;
+    border-radius: 20px;
+    cursor: pointer;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #00b303;
+}
