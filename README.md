@@ -8,7 +8,7 @@ ResQCall is a location-based web app that provides real-time weather updates and
 
 - **Disaster Reporting**: Report disasters and emergencies with ease. ResQCall helps you quickly communicate your needs and alert authorities and volunteers.
 
-- **Urgent Requirements**: In times of crisis, you can ask help from the ResQCall community. Connect with people who can provide assistance, resources, or information.
+- **Urgent Requirements**: In times of crisis, you can ask for help from the ResQCall community. Connect with people who can provide assistance, resources, or information.
 
 - **User-Friendly**: ResQCall is designed with a simple and intuitive interface, making it easy for anyone to use, even in stressful situations.
 
@@ -19,6 +19,9 @@ ResQCall is a location-based web app that provides real-time weather updates and
 2. **Report a Disaster**: If you encounter a disaster or emergency, click on the "Report Disaster" button. Fill in the details, including the type of disaster, your location, and contact information.
 
 3. **Stay Informed**: Use ResQCall to stay informed about weather changes and potential disasters in your area.
+   
+<img width="721" alt="resqcall_appshot" src="https://github.com/mapdevsaikat/ResQcall/assets/67556186/ea62ce31-71c5-4d9a-8326-acec69e76877">
+
 
 ## Contributing
 
